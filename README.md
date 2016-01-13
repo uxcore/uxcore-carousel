@@ -4,7 +4,7 @@
 
 ## TL;DR
 
-uxcore-carousel ui component for react
+uxcore-carousel ui component for react, custom from react-slick
 
 #### setup develop environment
 
@@ -24,6 +24,5 @@ http://uxcore.github.io/
 
 ## Props
 
-| 配置项 | 类型 | 必填 | 默认值 | 功能/备注 |
-|---|---|---|---|---|
+配置项与 [react-slick](https://www.npmjs.com/package/react-slick) 相同
 

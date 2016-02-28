@@ -25,6 +25,8 @@ if (typeof window !== 'undefined') {
 let Slick = require('react-slick');
 let assign = require('object-assign');
 let classnames = require('classnames');
+let React = require('react'); 
+let ReactDOM = require('react-dom');
 
 
 class Carousel extends React.Component {

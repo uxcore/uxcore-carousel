@@ -49,6 +49,9 @@ var concat = require('gulp-concat');
 // https://www.npmjs.com/package/gulp-just-replace/
 var replace = require('gulp-just-replace');
 
+// https://www.npmjs.com/package/gulp-es3ify
+var es3ify = require("gulp-es3ify");
+
 gulp.task('pack_demo', function(cb) {
     webpack(require('./webpack.dev.js'), function (err, stats) {
         // 重要 打包过程中的语法错误反映在stats中
@@ -62,9 +65,10 @@ gulp.task('pack_demo', function(cb) {
 gulp.task('pack_build', function(cb) {
     gulp.src(['./src/**/*.js'])
         .pipe(babel({
-            presets: ['react', 'es2015', 'stage-1'],
+            presets: ['react', 'es2015-loose', 'stage-1'],
             plugins: ['add-module-exports']
         }))
+        .pipe(es3ify())
         .pipe(gulp.dest('build'))
         .on('end', function() {
             cb();
@@ -148,6 +152,20 @@ gulp.task('publish', ['pack_build'], function() {
                 name: 'branch',
                 message: 'which branch you want to push',
                 default: 'master'
+            },
+            {
+                type: 'input',
+                name: 'npm',
+                message: 'which npm you want to publish',
+                default: 'npm',
+                validate: function(input) {
+                    if (/npm/.test(input)) {
+                        return true;
+                    }
+                    else {
+                        return "it seems not a valid npm"
+                    }
+                }
             }
         ];
         inquirer.prompt(questions, function(answers) {
@@ -158,7 +176,7 @@ gulp.task('publish', ['pack_build'], function() {
             spawn.sync('git', ['commit', '-m', 'ver. ' + pkg.version], {stdio: 'inherit'});
             spawn.sync('git', ['push', 'origin', answers.branch], {stdio: 'inherit'});
             console.log(colors.info('#### Npm Info ####'));
-            spawn.sync('npm', ['publish'], {stdio: 'inherit'});
+            spawn.sync(answers.npm, ['publish'], {stdio: 'inherit'});
         })
     }, 0)
     

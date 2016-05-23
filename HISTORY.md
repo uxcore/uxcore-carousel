@@ -1,3 +1,7 @@
+## 0.2.1
+
+`FIXED` fix issue #2
+
 ## 0.2.0
 
 `CHANGED` new style

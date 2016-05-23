@@ -78,12 +78,12 @@
         &[dir="rtl"] {
             left: auto;
             right: 10px;
+            &:before {
+                content: @slick-next-character;
+            }
         }
         &:before {
             content: @slick-prev-character;
-            &[dir="rtl"] {
-                content: @slick-next-character;
-            }
         }
     }
 
@@ -92,12 +92,12 @@
         &[dir="rtl"] {
             left: 10px;
             right: auto;
+            &:before {
+                content: @slick-prev-character;
+            }
         }
         &:before {
             content: @slick-next-character;
-            &[dir="rtl"] {
-                content: @slick-prev-character;
-            }
         }
     }
 

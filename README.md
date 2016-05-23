@@ -50,6 +50,7 @@ var SimpleSlider = React.createClass({
 | nextArrow      | React Component | Use this component for the next arrow button | Yes |
 | prevArrow      | React Component | Use this component for the prev arrow button | Yes |
 | autoplay       | bool | Should the scroller auto scroll? | Yes |
+| pauseOnHover   | bool | Should pause autoplay when an item is hoverd | No |
 | autoplaySpeed  |  int | delay between each auto scoll. in ms | Yes |
 | centerMode     | bool | Should we centre to a single item? | Yes |
 | centerPadding  | | | |

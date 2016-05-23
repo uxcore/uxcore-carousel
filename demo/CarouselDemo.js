@@ -21,7 +21,7 @@ class Demo extends React.Component {
     render() {
         return (
             <div>
-                <Carousel className="demo" autoplay={true}>
+                <Carousel className="demo" autoplay={true} pauseOnHover={true}>
                     <h3>1</h3>
                     <h3>2</h3>
                     <h3>3</h3>

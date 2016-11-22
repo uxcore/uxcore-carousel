@@ -79,7 +79,15 @@ var SimpleSlider = React.createClass({
 | vertical | bool |||
 | afterChange | function | callback function called after the current index changes | Yes |
 | beforeChange | function | callback function called before the current index changes | Yes |
-| slickGoTo | int | go to the specified slide number
+| slickGoTo | int | go to the specified slide number|
+
+## extended Props 
+
+|    Property    | Type |          Description          | Working |
+| -------------  | ---- |          -----------          | ------- |
+| centerDots     | bool |  center the dots              | Yes |
+| largeArrowsAndDots | bool |  use large arrows & dots when the carousel is very large | No |
+
 
 ## Custom next/prev arrows
 

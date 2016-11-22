@@ -24,6 +24,13 @@
 @carouselPrefixCls: kuma-carousel;
 
 .@{carouselPrefixCls} {
+    &:hover {
+        .slick-prev,
+        .slick-next {
+            opacity: 1;
+            transition: opacity 0.2s;
+        }
+    }
     /* Slider */
     .slick-loading .slick-list{
         background: #fff url('https://gtms02.alicdn.com/tps/i2/TB1ZOqiLpXXXXcMXpXXBStGGXXX-32-32.gif') center center no-repeat;
@@ -35,12 +42,14 @@
     .slick-next {
         position: absolute;
         display: block;
-        height: 24px;
-        width: 20px;
+        opacity: 0;
+        z-index: 1;
+        height: 37px;
+        width: 24px;
         line-height: 0px;
         font-size: 0px;
         cursor: pointer;
-        background: rgba(0, 0, 0, 0.1);
+        background: rgba(51, 51, 51, 0.47);
         color: transparent;
         top: 50%;
         margin-top: -10px~'\9'; /*lte IE 8*/
@@ -50,7 +59,7 @@
         padding: 0;
         border: none;
         outline: none;
-        &:hover, &:focus {
+        &:hover {
             outline: none;
             background: rgba(0, 0, 0, 0.5);
             color: transparent;
@@ -104,7 +113,7 @@
     /* Dots */
 
     .slick-slider {
-
+        
     }
 
     .slick-dots {
@@ -265,6 +274,34 @@
         display: block;
         height: auto;
         border: 1px solid transparent;
+    }
+}
+
+.@{carouselPrefixCls}-dots-centered {
+    .slick-dots {
+        text-align: center;
+    }
+}
+
+.@{carouselPrefixCls}-large-mode {
+    .slick-prev,
+    .slick-next {
+        width: 36px;
+        height: 55px;
+    }
+    .slick-prev:before, 
+    .slick-next:before {
+        font-size: 36px;
+    }
+    .slick-dots {
+        li {
+            width: 16px;
+            height: 4px;
+            button {
+                width: 16px;
+                height: 4px;
+            }
+        }
     }
 }
 

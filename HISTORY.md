@@ -1,3 +1,7 @@
+## 0.3.1
+
+`CHANGED` support new props `largeArrowsAndDots` & `centerDots`
+
 ## 0.3.0
 
 `CHANGED` update react-slick to ~0.14.0

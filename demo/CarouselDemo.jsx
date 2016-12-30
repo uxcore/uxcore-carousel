@@ -21,7 +21,7 @@ class Demo extends React.Component {
   render() {
     return (
       <div>
-        <Carousel className="demo" autoplay pauseOnHover largeArrowsAndDots>
+        <Carousel className="demo" autoplay pauseOnHover largeArrowsAndDots={false}>
           <div>
             <img
               src="http://www.wallcoo.com/human/City_Night_Scene_02/wallpapers/1680x1050/City_Night_Scene_photography_L10_30.jpg" style={{ width: '100%' }}

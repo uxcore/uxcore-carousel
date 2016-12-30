@@ -62,6 +62,7 @@ Carousel.defaultProps = {
   prefixCls: 'kuma-carousel',
   largeArrowsAndDots: false,
   dots: true,
+  cssEase: 'ease-out',
   infinite: true,
   speed: 500,
   slidesToShow: 1,

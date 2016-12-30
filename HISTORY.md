@@ -1,3 +1,7 @@
+## 0.3.2
+
+`CHANGED` change default ease to `ease-out`
+
 ## 0.3.1
 
 `CHANGED` support new props `largeArrowsAndDots` & `centerDots`

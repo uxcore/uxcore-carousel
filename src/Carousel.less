@@ -277,6 +277,36 @@
     }
 }
 
+.@{carouselPrefixCls}-always-show-arrows {
+
+    /* Arrows */
+
+    .slick-prev,
+    .slick-next {
+        outline: none;
+        background: rgba(0, 0, 0, 0.5);
+        color: transparent;
+        opacity: 1;
+        transition: opacity 0.2s;
+        &:before {
+            opacity: @slick-opacity-on-hover;
+        }
+        &.slick-disabled:before {
+            opacity: @slick-opacity-not-active;
+        }
+    }
+}
+
+.@{carouselPrefixCls}-hide-arrows {
+
+    /* Arrows */
+
+    .slick-prev,
+    .slick-next {
+        display: none !important;
+    }
+}
+
 .@{carouselPrefixCls}-dots-centered {
     .slick-dots {
         text-align: center;

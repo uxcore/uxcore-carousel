@@ -46,7 +46,7 @@ var SimpleSlider = React.createClass({
 | -------------  | ---- |          -----------          | ------- |
 | className      | String |Additional class name for the inner slider div | Yes |
 | adaptiveHeight | bool | Adjust the slide's height automatically | Yes |
-| arrows         | bool | Should we show Left and right nav arrows | Yes |
+| arrows         | bool/String | false : Should we hide left and right nav arrows,'always': Left and right nav arrows always to show , other value: hover to show left and right nav arrows| Yes |
 | nextArrow      | React Component | Use this component for the next arrow button | Yes |
 | prevArrow      | React Component | Use this component for the prev arrow button | Yes |
 | autoplay       | bool | Should the scroller auto scroll? | Yes |

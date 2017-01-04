@@ -1,3 +1,7 @@
+## 0.3.3
+
+`CHANGED` props `arrows` can be `always/hover`
+
 ## 0.3.2
 
 `CHANGED` change default ease to `ease-out`

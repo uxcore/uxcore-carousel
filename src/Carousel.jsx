@@ -42,7 +42,7 @@ class Carousel extends React.Component {
     const me = this;
 
     const { className, prefixCls, centerDots, largeArrowsAndDots, ...props } = me.props;
-    props.arrows = props.arrows === false ? false : true;
+    props.arrows = !!props.arrows;
 
     return (
       <div

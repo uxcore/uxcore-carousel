@@ -40,15 +40,16 @@ class Carousel extends React.Component {
 
   render() {
     const me = this;
-    const { className, prefixCls, centerDots, largeArrowsAndDots, arrows, ...props } = me.props;
+    const { className, prefixCls, centerDots, largeArrowsAndDots, ...props } = me.props;
+
     return (
       <div
         className={classnames({
           [`${prefixCls}`]: true,
           [`${prefixCls}-dots-centered`]: !!centerDots,
           [`${prefixCls}-large-mode`]: !!largeArrowsAndDots,
-          [`${prefixCls}-always-show-arrows`]: (arrows === 'always'),
-          [`${prefixCls}-hide-arrows`]: (arrows === false),
+          [`${prefixCls}-always-show-arrows`]: (props.arrows === 'always'),
+          [`${prefixCls}-hide-arrows`]: (props.arrows === false),
           [className]: !!className,
         })}
       >

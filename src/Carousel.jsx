@@ -40,13 +40,17 @@ class Carousel extends React.Component {
 
   render() {
     const me = this;
+
     const { className, prefixCls, centerDots, largeArrowsAndDots, ...props } = me.props;
+    props.arrows = !!props.arrows;
+
     return (
       <div
         className={classnames({
           [`${prefixCls}`]: true,
           [`${prefixCls}-dots-centered`]: !!centerDots,
           [`${prefixCls}-large-mode`]: !!largeArrowsAndDots,
+          [`${prefixCls}-always-show-arrows`]: (me.props.arrows === 'always'),
           [className]: !!className,
         })}
       >
@@ -68,6 +72,7 @@ Carousel.defaultProps = {
   slidesToShow: 1,
   centerDots: true,
   slidesToScroll: 1,
+  arrows: 'hover'
 };
 
 

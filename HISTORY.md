@@ -1,3 +1,7 @@
+## 0.3.4
+
+`CHANGED` add background transition
+
 ## 0.3.3
 
 `CHANGED` props `arrows` can be `always/hover`

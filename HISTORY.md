@@ -1,3 +1,7 @@
+## 0.3.5
+
+`CHANGED` lock react-slick version
+
 ## 0.3.4
 
 `CHANGED` add background transition

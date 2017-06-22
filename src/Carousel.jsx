@@ -79,6 +79,7 @@ Carousel.defaultProps = {
 // http://facebook.github.io/react/docs/reusable-components.html
 Carousel.propTypes = {
   centerDots: React.PropTypes.bool,
+  children: React.PropTypes.node,
 };
 
 Carousel.displayName = 'Carousel';

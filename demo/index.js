@@ -6,5 +6,7 @@
  * All rights reserved.
  */
 
- var Demo = require('./CarouselDemo');
- ReactDOM.render(<Demo/>, document.getElementById('UXCoreDemo'));
+const Demo = require('./CarouselDemo');
+
+ReactDOM.render(<Demo />, document.getElementById('UXCoreDemo'));
+

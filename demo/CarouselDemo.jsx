@@ -6,9 +6,8 @@
  * All rights reserved.
  */
 
-const React = require('react');
-
-const Carousel = require('../src');
+import * as React from 'react';
+import Carousel from '../src';
 
 class Demo extends React.Component {
 

@@ -1,6 +1,7 @@
-## 0.3.6
+## 0.3.7
 
-`CHANGED` lock react-slick version
+`CHANGED` React 15.x compatibility
+`CHANGED` Use ES6 modules instead of commonjs
 
 ## 0.3.5
 

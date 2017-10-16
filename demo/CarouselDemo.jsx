@@ -6,7 +6,7 @@
  * All rights reserved.
  */
 
-import * as React from 'react';
+import React from 'react';
 import Carousel from '../src';
 
 class Demo extends React.Component {
@@ -47,4 +47,4 @@ class Demo extends React.Component {
   }
 }
 
-module.exports = Demo;
+export default Demo;

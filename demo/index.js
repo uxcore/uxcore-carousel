@@ -6,7 +6,8 @@
  * All rights reserved.
  */
 
-const Demo = require('./CarouselDemo');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Demo from './CarouselDemo';
 
 ReactDOM.render(<Demo />, document.getElementById('UXCoreDemo'));
-

@@ -10,7 +10,7 @@
 // https://github.com/WickyNilliams/enquire.js/issues/82
 
 import classnames from 'classnames';
-import * as React from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Slick from 'react-slick';
 

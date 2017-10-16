@@ -6,4 +6,6 @@
  * All rights reserved.
  */
 
-module.exports = require('./Carousel');
+import Carousel from './Carousel';
+
+export default Carousel;

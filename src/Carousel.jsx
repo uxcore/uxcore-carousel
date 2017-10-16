@@ -9,6 +9,11 @@
 // matchMedia polyfill for
 // https://github.com/WickyNilliams/enquire.js/issues/82
 
+import classnames from 'classnames';
+import React from 'react';
+import PropTypes from 'prop-types';
+import Slick from 'react-slick';
+
 if (typeof window !== 'undefined') {
   const matchMediaPolyfill = function matchMediaPolyfill() {
     return {
@@ -22,12 +27,24 @@ if (typeof window !== 'undefined') {
   window.matchMedia = window.matchMedia || matchMediaPolyfill;
 }
 
-const Slick = require('react-slick');
-const classnames = require('classnames');
-const React = require('react');
-
-
 class Carousel extends React.Component {
+  static displayName = 'Carousel';
+  static propTypes = {
+    centerDots: PropTypes.bool,
+    children: PropTypes.node,
+  };
+  static defaultProps = {
+    prefixCls: 'kuma-carousel',
+    largeArrowsAndDots: false,
+    dots: true,
+    cssEase: 'ease-out',
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    centerDots: true,
+    slidesToScroll: 1,
+    arrows: 'hover',
+  };
 
   processChildren() {
     const me = this;
@@ -40,8 +57,8 @@ class Carousel extends React.Component {
 
   render() {
     const me = this;
-
     const { className, prefixCls, centerDots, largeArrowsAndDots, ...props } = me.props;
+
     props.arrows = !!props.arrows;
 
     return (
@@ -62,26 +79,5 @@ class Carousel extends React.Component {
   }
 }
 
-Carousel.defaultProps = {
-  prefixCls: 'kuma-carousel',
-  largeArrowsAndDots: false,
-  dots: true,
-  cssEase: 'ease-out',
-  infinite: true,
-  speed: 500,
-  slidesToShow: 1,
-  centerDots: true,
-  slidesToScroll: 1,
-  arrows: 'hover'
-};
+export default Carousel;
 
-
-// http://facebook.github.io/react/docs/reusable-components.html
-Carousel.propTypes = {
-  centerDots: React.PropTypes.bool,
-  children: React.PropTypes.node,
-};
-
-Carousel.displayName = 'Carousel';
-
-module.exports = Carousel;

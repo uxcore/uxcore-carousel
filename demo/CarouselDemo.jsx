@@ -6,9 +6,8 @@
  * All rights reserved.
  */
 
-const React = require('react');
-
-const Carousel = require('../src');
+import React from 'react';
+import Carousel from '../src';
 
 class Demo extends React.Component {
 
@@ -48,4 +47,4 @@ class Demo extends React.Component {
   }
 }
 
-module.exports = Demo;
+export default Demo;

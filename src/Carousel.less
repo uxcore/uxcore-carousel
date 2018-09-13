@@ -20,8 +20,8 @@
 @slick-opacity-default: 1;
 @slick-opacity-on-hover: 1;
 @slick-opacity-not-active: 0.75;
-@carouselPrefixCls: kuma-carousel;
-.@{carouselPrefixCls} {
+@__carouselPrefixCls: kuma-carousel;
+.@{__carouselPrefixCls} {
   &:hover {
     .slick-prev,
     .slick-next {
@@ -257,7 +257,7 @@
   }
 }
 
-.@{carouselPrefixCls}-always-show-arrows {
+.@{__carouselPrefixCls}-always-show-arrows {
   /* Arrows */
   .slick-prev,
   .slick-next {
@@ -265,13 +265,13 @@
   }
 }
 
-.@{carouselPrefixCls}-dots-centered {
+.@{__carouselPrefixCls}-dots-centered {
   .slick-dots {
     text-align: center;
   }
 }
 
-.@{carouselPrefixCls}-large-mode {
+.@{__carouselPrefixCls}-large-mode {
   .slick-prev,
   .slick-next {
     width: 36px;

@@ -1,3 +1,7 @@
+## 0.3.8
+
+`CHANGED` support js style export
+
 ## 0.3.7
 
 `CHANGED` React 15.x compatibility

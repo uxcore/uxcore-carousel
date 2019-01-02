@@ -47,7 +47,7 @@
  "dependencies": {
   "classnames": "^2.1.2",
   "prop-types": "15.x",
-  "react-slick": "0.14.8"
+  "react-slick": "0.22.0"
  },
  "contributors": [],
  "license": "MIT"

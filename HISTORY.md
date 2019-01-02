@@ -1,3 +1,6 @@
+## 0.4.0
+`CHANGED` update react-slick to 0.22.0
+
 ## 0.3.8
 
 `CHANGED` support js style export
